@@ -129,13 +129,13 @@ CombinedLabeledFullMeanStdDataSet[,Activity:=NULL]
 
 ## Step 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-`write a csv file to storage`
+`write a .txt file to storage`
 
 TidyDataSet<- CombinedLabeledFullMeanStdDataSet[, lapply(.SD, mean), by = 'SubjectsID,ActivityID']
 
-write.csv(TidyDataSet, file = "tidy.csv", row.names = FALSE)
+write.table(TidyDataSet, file = "tidy.txt", row.names = FALSE)
 
-The output tidy data set can be viewed here: [tidy.csv](tidy.csv)
+The output tidy data set can be viewed here: [tidy.txt](tidy.txt)
 
 For more information about the datasets and the analyses see the [code book](CodeBook.md).
 
