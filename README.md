@@ -78,7 +78,7 @@ CombinedFullDataSet <- cbind(CombinedSubjectActivitySets, CombinedDataSet)
 
 ## Step 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 
-`Extract from the Features data.table any feature utilizing mean() and std() for the measurements
+`Extract from the Features data.table any feature utilizing mean() and std() for the measurements`
 
 FeaturesMeanStdSet <- Features[grep("std\\(\\)|mean\\(\\)",Feature),Feature]
 
@@ -127,7 +127,7 @@ CombinedLabeledFullMeanStdDataSet[,Subject:=NULL]
 CombinedLabeledFullMeanStdDataSet[,Activity:=NULL]
 
 
-## Part 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## Step 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 `write a csv file to storage`
 
